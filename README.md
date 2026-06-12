@@ -28,10 +28,42 @@ Annotated expression matrix with samples' perturbagens overlap with drugs of int
 
 ---
 
-### DEA_hiPSC_control.csv
+### DEA_hiPSC_control_ALL.csv
 Differential expression analysis results for **hiPSC_control** samples. 
 The linear model was fitted using the limma framework with `~ batch + drug`, DMSO was used as the reference condition.
-Final result was filtered by p< 0.05 for statistical significance.
+
+Rows:
+Each row corresponds to a **probe–drug** comparison against **DMSO**.
+
+Columns:
+- drug: perturbagen name
+- logFC: log fold change (drug vs DMSO)
+- adjP: Benjamini–Hochberg adjusted p-value
+- direction: Up / Down regulation
+- gene_id: gene identifier mapped from probe ID
+
+---
+
+### DEA_hiPSC_SZ_ALL.csv
+Differential expression analysis results for **hiPSC_SZ** samples. 
+The linear model was fitted using the limma framework with `~ batch + drug`, DMSO was used as the reference condition.
+
+Rows:
+Each row corresponds to a **probe–drug** comparison against **DMSO**.
+
+Columns:
+- drug: perturbagen name
+- logFC: log fold change (drug vs DMSO)
+- adjP: Benjamini–Hochberg adjusted p-value
+- direction: Up / Down regulation
+- gene_id: gene identifier mapped from probe ID
+
+---
+
+### DEA_hiPSC_control.csv
+Filtered differential expression analysis results for **hiPSC_control** samples. 
+The linear model was fitted using the limma framework with `~ batch + drug`, DMSO was used as the reference condition.
+Final result was filtered by BH adjusted p< 0.05 for statistical significance.
 
 Rows:
 Each row corresponds to a **probe–drug** comparison against **DMSO**.
@@ -47,9 +79,9 @@ Columns:
 ---
 
 ### DEA_hiPSC_SZ.csv
-Differential expression analysis results for **hiPSC_SZ** samples. 
+Filtered differential expression analysis results for **hiPSC_SZ** samples. 
 The linear model was fitted using the limma framework with `~ batch + drug`, DMSO was used as the reference condition.
-Final result was filtered by p< 0.05 for statistical significance.
+Final result was filtered by BH adjusted p< 0.05 for statistical significance.
 
 Rows:
 Each row corresponds to a **probe–drug** comparison against **DMSO**.
